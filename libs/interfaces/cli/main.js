@@ -33,7 +33,7 @@ function _initConverter(){
     writeStream.write("[\n"); //write array symbol
 
     csvConverter.on("end_parsed",function(){
-        writeStream.write("\n]"); //end array symbol
+        writeStream.write("\n]\n"); //end array symbol
     });
     csvConverter.on("error",function(err){
         console.error(err);
